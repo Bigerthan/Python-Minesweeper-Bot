@@ -12,10 +12,10 @@ Because we opened the browser with Playwright, we can get all DOM structure when
 
 Well, yes. We can use the browser to get cell/box data we need. Because we use the browser we can use Javascript code to filter and get cell/box data and it is faster than getting *all* DOM then filtering it in Python. After we get filtered cell/box data we are going to process it in Python then feed it to other functions. 
 
-### Note: You may have to check and change you'r DPI (Dots Per Inch) if it clicks wrong places.
+### Note: You may have to check and change your DPI (Dots Per Inch) if it clicks wrong places.
 ![](MW_PW_photos/DPI_scale.png)
 
-You can find this in you'r display settings and you should change it as small number like:
+You can find this in your display settings and you should change it as small number like:
 
 200% = 2
 
