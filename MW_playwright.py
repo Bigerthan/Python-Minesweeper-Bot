@@ -400,7 +400,7 @@ class MWPlaywright:
         if sum(self.Win_scores) != 0:
             print(f"\nBOT STATISTICS:\nWon: {len(self.Win_scores)}    Lost: {self.Restart_count-len(self.Win_scores)}\nTotal game(s): {self.Restart_count}\nWin Rate: %{len(self.Win_scores)*100/(self.Restart_count)}\nAverage score: {sum(self.Win_scores)/len(self.Win_scores)} second(s)\n")
         else:
-            print(f"Bot didn't win.")
+            print(f"\nBot didn't win.\n")
             
         self.Close_Browser() #Close the Bot and the Broswer
 
