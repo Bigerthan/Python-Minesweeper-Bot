@@ -1,5 +1,3 @@
-# NOTE: You might get a faster faster record cuz I didn't try a lot of time.
-
 ## Beginner Mode (*1 second*)
 ![](MW_PW_photos/Beginner_Mode_1sec.png)
 
