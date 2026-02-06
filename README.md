@@ -2,7 +2,9 @@
 Minesweeper Solver Bot with Playwright library
 
 # LAST CHANGES:
-- Added "Non_Logical_action" function. It is responsible for trying to solve 50/50 or other luck-based, unsolvable with logic parts. Check "Explanation.md" if you want more detail about how it works.
+- Added "Non_Logical_Neighbor_Action" function. This is responsible for trying to solve 50/50 or other luck-based, unsolvable with logic parts. Check "Explanation.md" if you want more detail about how it works.
+  
+- Added "Open_First_Uknown_Action" function. This takes charge when "Non_Logical_Neighbor_Action" can't do anything. Check "Explanation.md" if you want more detail about how it works.
 
 - Added a function called "No_Unflagged_Bomb_Left_Action" and its purpose is: when all the bombs are found, it opens all the unopened cells/boxes to finish the game.
   
