@@ -35,9 +35,6 @@ It has an issue: normally when you set a record, a pop-up or alert shows up but,
 
 WARING: When you use the bot and win, the anti-bot detection bans your IP (I guess but I'm not very sure). At the first time your record will stay on leaderboard for some time but when it detected and deleted, your name won't even show up on the leaderboard.
 
-#
-It has another issue for now. Sometimes it keeps flagging and unflagging same place. I yet to know why that is happening. To solve this you need to click another cell/box to break the loop or quit.
-
 # Controls:
 Press "R" to Pause/Resume
 
