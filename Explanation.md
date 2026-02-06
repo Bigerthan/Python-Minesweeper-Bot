@@ -13,7 +13,7 @@ Because we opened the browser with Playwright, we can get all DOM structure when
 Well, yes. We can use the browser to get cell/box data we need. Because we use the browser we can use Javascript code to filter and get cell/box data and it is faster than getting *all* DOM then filtering it in Python. After we get filtered cell/box data, we are going to process it in Python then feed it to other functions. 
 
 ## Then what is after updateing cell/box data?
-Quick answer is useing "Logical Actions". But what are those actions that led us to win the game?
+Quick answer is useing logical actions. But what are those actions that led us to win the game?
 #### 1) Basic Logic:
 
 #### 2) Difference Logic:
@@ -25,7 +25,7 @@ Quick answer is useing "Logical Actions". But what are those actions that led us
 #
 But are they enough, do you need only this much logical action to win the game?
 
-Well, no. As you know sometimes minesweeper is only a guessing game and you can't do anything with logics so we need some "Non-Logical Functions".
+Well, no. As you know sometimes minesweeper is only a guessing game and you can't do anything with logics so we need some non-logical actions.
 # Setting The Settings:
 ![](MW_PW_photos/Settings_expl.png)
 
