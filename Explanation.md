@@ -14,16 +14,17 @@ Well, yes. We can use the browser to get cell/box data we need. Because we use t
 
 ## Then what is after updateing cell/box data?
 Quick answer is useing logical actions. But what are those actions that led us to win the game?
+
 #### 1) Basic Logic:
 This function does 2 things:
 - If the number on the cell/box equals the amount of neighbor flags, it opens all unopened safe cells/boxes.
 - If the amount of unopened cells/boxes equals the number on the cell/box, it flags all unopened cells/boxes.
   
 #### 2) Difference Logic:
-This function looks for
+This function looks for the difference (neighbors as in sets) of 2 cells/boxes. Then uses mathematical set logic to solve.
 
 #### 3) Two Steps Ahead Logic:
-This function searches connection between 2 cells/boxes which have an unopened cell/box between. After that it uses mathematical set logic to solve.
+This function searches connection between 2 cells/boxes which have an unopened cell/box between. Then uses mathematical set logic to solve.
 
 #### 4) No Unflagged Bomb Left Action:
 This function opens all unopened cells/boxes if all the bombs are found.
