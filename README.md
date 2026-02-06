@@ -9,6 +9,8 @@ Minesweeper Solver Bot with Playwright library
 - Click function has changed again. Now it doesn't click on the screen, it clicks on the browser so you can close the window and it is going to run in the backround. This change also made clicking safer and no need left to check DPI scale.
 
 - Added some optional settings that you set when you are starting the bot. Check "Explanation.md" if you want to see.
+  
+- Deleted "OTO_Logic" function because it makes mistakes and there was no need for it.
 ### Small changes:
 - Added Statistics. It shows up when you close the bot (Only works if "Restart_on_Win" and other settings are enabled).
   - I need to explain something. If you look at the statistics of survival chances on death and win, you'll see that the average survival chance on win is actually lower than on death. And it looks a bit strange. The reason for this is:
