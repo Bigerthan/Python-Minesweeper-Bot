@@ -18,11 +18,9 @@ Quick answer is useing "Logical Actions". But what are those actions that led us
 
 #### 2) Difference Logic:
 
-#### 3) One-Two-One Logic:
+#### 3) Two Steps Ahead Logic:
 
-#### 4) Two Steps Ahead Logic:
-
-#### 5) No Unflagged Bomb Left Action:
+#### 4) No Unflagged Bomb Left Action:
 
 #
 But are they enough, do you need only this much logical action to win the game?
