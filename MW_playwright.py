@@ -37,7 +37,7 @@ class MWPlaywright:
         self.Restart_count = 0
         self.Any_action_taken = False 
         self.edge_cells= {} #This is for Non-Logical_action
-        self.founded_bomb_count = 0
+        self.found_bomb_count = 0
         self.Survived_chance = 100
 
     def Add_Blocker(self, route): #to block adverts and make the site faster
@@ -237,11 +237,11 @@ class MWPlaywright:
         return cell_details
 
     def Found_bomb_counter(self):
-        self.founded_bomb_count = 0
+        self.found_bomb_count = 0
         for y in range(1, self.row_count + 1):
                 for x in range(1, self.col_count + 1):
                     if self.cell_datas[(y,x)] == "!":
-                        self.founded_bomb_count +=1
+                        self.found_bomb_count +=1
 
     def Skip_cell(self, cell_details):
         status = cell_details["status"]
@@ -357,7 +357,7 @@ class MWPlaywright:
 
     def No_Unflagged_Bomb_Left_Action(self):
         self.Found_bomb_counter()
-        if self.founded_bomb_count == self.total_bomb_count:
+        if self.found_bomb_count == self.total_bomb_count:
             #print("All bombs have been founded. Opening all remain unopened cells.")
             for y in range(1, self.row_count + 1):
                     for x in range(1, self.col_count + 1):
@@ -385,12 +385,17 @@ class MWPlaywright:
                 self.edge_cells= {}
                 self.Any_action_taken=True
 
-    def Open_First_Uknown_Action(self):
+    def Open_First_Unknown_Action(self):
+        self.Found_bomb_counter()
+        Total_unknown_count = sum(1 for status in self.cell_datas.values() if status == "?")
+        Remaining_bomb_count = self.total_bomb_count - self.found_bomb_count
         for y in range(1, self.row_count + 1):
             for x in range(1, self.col_count + 1):
                 if self.cell_datas[(y,x)] == "?":
+                    self.Survived_chance = self.Survived_chance * (100-(Remaining_bomb_count/Total_unknown_count)*100)/100
                     self.Click(y, x, "left")
-
+                    return
+    
     def Start_BOT(self, Auto_Start=False, will_Restart_on_Death=True, will_Restart_on_Win=False, Auto_Start_on_Death_Restart=False, Auto_Start_on_Win_Restart=False):
         print('Browser is starting. Press "R" to Stop, Press "ESC" to Quit. It may take some time at the first time.\n')
         time.sleep(1)
@@ -437,7 +442,7 @@ class MWPlaywright:
                         self.Non_Logical_Neighbor_Action()
                     
                     if not self.Any_action_taken:
-                        self.Open_First_Uknown_Action()
+                        self.Open_First_Unknown_Action()
             else:
                 pass
 
